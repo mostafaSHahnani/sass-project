@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,IAAI,CAAA;EACA,gBAAgB,EAAE,GAAG;CACxB",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/_base.scss",
+        "../scss/_components.scss",
+        "../scss/_layout.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
