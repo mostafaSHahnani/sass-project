@@ -11,6 +11,11 @@
   font-weight: normal;
 }
 
+.card-overlay, .card-img {
+  width: 100%;
+  height: 100%;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -45,7 +50,6 @@ body {
   color: #bbb;
   font-weight: 300;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .sub-name {
@@ -55,12 +59,11 @@ body {
   text-align: center;
   font-weight: 300;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 
 .main-heading {
   font-family: "nastaliq", tahoma;
-  font-size: 100px;
+  font-size: 60px;
   font-weight: 300;
   color: #d3ab55;
   margin-bottom: 20px;
@@ -68,7 +71,7 @@ body {
 
 .sub-heading {
   font-family: "sahel", tahoma;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 300;
   color: #bbb;
   margin-bottom: 30px;
@@ -92,6 +95,75 @@ body {
 .main-btn:hover {
   background-color: #d3ab55;
   color: #262626;
+}
+
+.card {
+  width: 33.3333%;
+  height: 30vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover .card-overlay {
+  left: 0;
+}
+
+.card-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  color: #fff;
+  background-color: rgba(211, 171, 85, 0.6);
+  z-index: 10;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+}
+
+.card-overlay-heading {
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: "nastaliq", tahoma;
+  font-size: 50px;
+}
+
+.card-overlay-paragraph {
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: "sahel", tahoma;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.card-overlay-btn {
+  width: 150px;
+  height: 40px;
+  color: #d3ab55;
+  background-color: #fff;
+  font-family: "sahel", tahoma;
+  font-size: 18px;
+  border: 1px solid #d3ab55;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.card-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
 }
 
 .header {
@@ -127,7 +199,7 @@ body {
 }
 
 .about-us {
-  height: 100vh;
+  height: 110vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,7 +236,7 @@ body {
 
 .about-us-right .main-heading {
   font-size: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .about-us-right .sub-heading {
@@ -188,5 +260,13 @@ body {
   color: #bbb;
   direction: rtl;
   text-align: justify;
+}
+
+.gallery .cards-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=main.css.map */

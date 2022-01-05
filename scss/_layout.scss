@@ -18,7 +18,7 @@
 }
 
 .about-us{
-    height: 100vh;
+    height: 110vh;
     display: flex;
     align-items: center;
 
@@ -41,7 +41,7 @@
 
         .main-heading{
             font-size: 60px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         .sub-heading{
             font-size: 40px;
@@ -66,4 +66,15 @@
             text-align: justify;
         }
     }
+}
+
+
+.gallery{
+    .cards-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+
 }
