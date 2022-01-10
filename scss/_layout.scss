@@ -13,27 +13,47 @@
             left: -50vw;
             transition: left 0.8s cubic-bezier(1,0,0,1);
 
+            @media (max-width:800px) {
+                display: none;
+            }
+
             .left-img{
                 width: 50%;
                 position: absolute;
                 box-shadow: 0 15px 60px rgba($color-black,.4);
                 opacity: .7;
                 border-radius: 10px;
+
+                @media (max-width:1300px) {
+                    width: 55%;
+                }
+                @media (max-width:1000px) {
+                    width: 65%;
+                }
             }
 
             .left-img-1{
                 top: 15%;
                 left: 15%;
+                @media (max-width:1000px) {
+                    left: 5%;
+                }
             }
 
             .left-img-2{
                 top: 35%;
                 left: 25%;
+                @media (max-width:1000px) {
+                    left: 15%;
+                }
             }
 
             .left-img-3{
                 top: 55%;
                 left: 35%;
+                @media (max-width:1000px) {
+                    left: 20%;
+                }
             }
         }
 
@@ -45,6 +65,11 @@
             right: -50vw;
             @include flexlayout ;
             transition: right 0.8s cubic-bezier(1,0,0,1);
+
+            @media (max-width:800px) {
+                width: 100vw;
+                right: -100vw;
+            }
         }
 
         .nav-list{
@@ -62,6 +87,10 @@
                 margin: 20px;
                 text-align: center ;
                 transition: all .5s;
+
+                @media (max-width:600px) {
+                    font-size: 30px;
+                }
 
                 &:hover{
                     color: $color-primary;
@@ -122,8 +151,18 @@
     display: flex;
     align-items: center;
 
+
+    @media (max-width:800px) {
+        height: 70vh;
+    }
+    
+
     &-left{
         width: 40%;
+
+        @media (max-width:800px) {
+            display: none;
+        }
 
         img{
             width: 100%;
@@ -139,23 +178,60 @@
         padding: 0 80px;
         box-sizing: border-box;
 
+        @media (max-width:1300px) {
+           padding: 0 50px;
+        }
+
+        @media (max-width:800px) {
+            width: 100%;
+        }
+
+
         .main-heading{
             font-size: 60px;
             margin-bottom: 10px;
+
+            @media (max-width:1600px) {
+                font-size: 80px;
+            }
+        
+            @media (max-width:1000px) {
+                font-size: 60px;
+            }
         }
         .sub-heading{
             font-size: 40px;
             margin-bottom: 20px;
+
+            @media (max-width:1600px) {
+                font-size: 50px;
+                margin-bottom: 50px;
+            }
+            @media (max-width:1300px) {
+                font-size: 40px;
+                margin-bottom: 30px;
+            }
+            @media (max-width:1000px) {
+                font-size: 30px;
+            }
         }
 
         .stars{
-            margin: 10px 0;
+            margin: 30px 0;
+        
+            @media (max-width:1000px) {
+                margin: 15px 0;
+            }
         }
 
         .star{
             font-size: 15px;
             color: $color-primary;
             margin-right: 10px;
+
+            @media (max-width:1000px) {
+                font-size: 12px;
+            }
         }
 
         .description{
@@ -164,6 +240,14 @@
             color: $color-secondary;
             direction: rtl;
             text-align: justify;
+
+            @media (max-width:1600px) {
+                font-size: 20px;
+            }
+
+            @media (max-width:1000px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -181,6 +265,11 @@
     padding: 70px 0;
     @include flexlayout ;
     flex-direction: column;
+
+    @media (max-width:500px) {
+        padding: 40px 0;
+    }
+
     &-header{
         display: flex;
         align-items: center;
@@ -192,6 +281,11 @@
         width: 300px;
         justify-content: space-between;
         margin-bottom: 70px;
+
+        @media (max-width:500px) {
+            width: 200px;
+            margin-bottom: 40px;
+        }
 
         &-item{
             list-style: none;
@@ -207,6 +301,10 @@
             &:hover{
                 color: $color-primary;
             }
+
+            @media (max-width:1000px) {
+                font-size: 35px;
+            }
         }
     }
 
@@ -215,5 +313,15 @@
         font-size: 20px;
         color: $color-secondary;
         direction: rtl;
+
+        @media (max-width:800px) {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+
+        @media (max-width:500px) {
+            font-size: 14px;
+        }
     }
 }
